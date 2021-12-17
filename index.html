@@ -1,0 +1,116 @@
+<!-- ------------------------------------------------------------------------->
+<!-- TODO: display formula -->
+<!-- TODO: solve for: resistance -->
+<!-- TODO: solve for: length -->
+<!-- TODO: solve for: area -->
+<!-- TODO: solve for: resistivity -->
+<!-- TODO: solve for: material -->
+<!-- TODO: add V=IR calculator below with R taken from the calculator above -->
+<!-- ------------------------------------------------------------------------->
+<!-- TODO: prettify result format -->
+<!-- TODO: hints -->
+<!-- ------------------------------------------------------------------------->
+<!-- TODO: comparison tabs -->
+<!-- TODO: display material image -->
+<!-- TODO: multi-level humongous list -->
+<!-- TODO: slider mode -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Varžos skaičiuoklė</title>
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <label for="material">Medžiaga:</label>
+                </td>
+                <td>
+                    <select id="material" onchange="change_material();change()">
+                        <option value=""></option>
+                        <option value="1.58e-8">Sidabras</option>
+                        <option value="1.68e-8">Varis</option>
+                        <option value="2.44e-8">Auksas</option>
+                        <option value="2.65e-8">Aliuminis</option>
+                        <option value="5.60e-8">Volframas</option>
+                        <option value="6.24e-8">Kobaltas</option>
+                        <option value="6.99e-8">Nikelis</option>
+                        <option value="9.70e-8">Geležis</option>
+                        <option value="10.6e-8">Platina</option>
+                        <option value="42.0e-8">Titanas</option>
+                        <option value="69.0e-8">Nerūdijantis plienas</option>
+                        <option value="98.0e-8">Gyvsidabris</option>
+                        <option value="110.0e-8">Nichromas</option>
+                        <option value="2.1e-1">Jūros vanduo</option>
+                        <option value="1.8e5">Distiliuotas vanduo</option>
+                        <option value="1e12">Deimantas</option>
+                        <option value="1e13">Stiklas</option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="resistivity">Savitoji varža:</label>
+                </td>
+                <td>
+                    <input id="resistivity" oninput="change();change_resistivity()">
+                </td>
+                <td>
+                    <select id="resistivity_unit">
+                        <option value="1">Ω⋅m</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="length">Ilgis:</label>
+                </td>
+                <td>
+                    <input id="length" oninput="change()">
+                </td>
+                <td>
+                    <select id="length_unit" onchange="change()">
+                        <option value="1" selected>m</option>
+                        <option value="1000">km</option>
+                        <option value="0.01">cm</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="area">Plotas:</label>
+                </td>
+                <td>
+                    <input id="area" oninput="change()">
+                </td>
+                <td>
+                    <select id="area_unit" onchange="change()">
+                        <option value="1e-6" selected>mm²</option>
+                        <option value="1e-4">cm²</option>
+                        <option value="1">m²</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="resistance">Varža:</label>
+                </td>
+                <td>
+                    <p id="resistance"></p>
+                </td>
+                <td>
+                    <select id="resistance_unit" onchange="change()">
+                        <option value="1">Ω</option>
+                        <option value="0.001">mΩ</option>
+                        <option value="1000">kΩ</option>
+                        <option value="1e6">MΩ</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

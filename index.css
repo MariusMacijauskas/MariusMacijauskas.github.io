@@ -1,0 +1,24 @@
+* {
+    font-size: 1em;
+    font-family: Arial;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+table {
+    margin:auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+select, input {
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
